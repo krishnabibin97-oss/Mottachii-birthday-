@@ -140,20 +140,36 @@ openBtn.onclick=()=>{
   confetti();
   startMusic();
 };
+const songUrl = "First Sight (Background Score)(1).mp3";
 
+const bgAudio = new Audio(songUrl);
+bgAudio.preload = "auto";
+bgAudio.loop = true;
+
+async function startMusic(){
+    try {
+        await bgAudio.play();
+        musicBtn.textContent = "❚❚";
+    } catch(err) {
+        console.log("Music could not start:", err);
+    }
+}
+
+musicBtn.onclick = async () => {
+    if (bgAudio.paused) {
+        await bgAudio.play();
+        musicBtn.textContent = "❚❚";
+    } else {
+        bgAudio.pause();
+        musicBtn.textContent = "♫";
+    }
+};
 moreBtn.onclick=()=>{
   more.classList.remove('hidden'); more.classList.add('reveal');
   moreBtn.style.display='none'; confetti();
 };
 
-// Lady Killers by G-Eazy — opens the official YouTube upload.
-const songUrl = "First Sight (Background Score)(1).mp3";
-let playing = false;
-function startMusic(){
-  window.open(songUrl, "_blank", "noopener,noreferrer");
-  musicBtn.textContent = "♫";
-}
-musicBtn.onclick = startMusic;
+
 </script>
 </body>
 </html>
