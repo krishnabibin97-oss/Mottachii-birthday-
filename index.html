@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Happy Birthday, Mottachiii 🤍</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  body{
+    background:#111317;
+    color:#fff;
+    overflow-x:hidden;
+  }
+  .glow{position:fixed;width:280px;height:280px;border-radius:50%;filter:blur(90px);opacity:.28;pointer-events:none}
+  .g1{background:#ff8fb3;top:-100px;left:-100px}.g2{background:#a78bfa;right:-120px;bottom:10%;}.g3{background:#ffd166;left:20%;bottom:-160px}
+  .screen{
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    padding:28px 18px;position:relative;
+  }
+  .card{
+    width:min(440px,100%);text-align:center;position:relative;z-index:2;
+    background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    border-radius:30px;padding:30px 22px;box-shadow:0 25px 80px rgba(0,0,0,.38);
+  }
+  .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.65;margin-bottom:12px}
+  h1{font-size:42px;line-height:1.02;margin:0 0 12px;font-weight:800}
+  h2{font-size:30px;margin:0 0 12px}
+  p{font-size:17px;line-height:1.6;color:#eee;margin:8px 0}
+  .name{background:linear-gradient(90deg,#fff,#ffb8cf,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  button{
+    border:0;border-radius:999px;padding:15px 22px;margin-top:18px;font-size:16px;font-weight:750;
+    color:#15151a;background:#fff;box-shadow:0 12px 30px rgba(255,255,255,.12);cursor:pointer;
+  }
+  button:active{transform:scale(.97)}
+  .photo-wrap{position:relative;margin:8px auto 20px;width:240px;height:240px}
+  .photo-wrap:before{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(255,255,255,.3);box-shadow:0 0 45px rgba(255,166,196,.22)}
+  .photo{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+  .float{position:absolute;font-size:25px;animation:float 3.2s ease-in-out infinite}
+  .f1{top:-8px;left:4px}.f2{right:-5px;top:35px;animation-delay:.7s}.f3{left:-15px;bottom:38px;animation-delay:1.2s}.f4{right:15px;bottom:-5px;animation-delay:1.7s}
+  @keyframes float{50%{transform:translateY(-9px) rotate(5deg)}}
+  .hidden{display:none}
+  .reveal{animation:rise .7s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  .letter{
+    text-align:left;background:rgba(255,255,255,.07);border-radius:22px;padding:20px;margin-top:20px;
+    border:1px solid rgba(255,255,255,.08)
+  }
+  .letter .big{font-size:23px;font-weight:800;margin-bottom:9px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+  .chip{padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.09);font-size:13px;color:#eee}
+  .footer{font-size:12px;opacity:.45;margin-top:22px}
+  #confetti{position:fixed;inset:0;pointer-events:none;z-index:10}
+  .conf{position:absolute;width:8px;height:14px;top:-20px;animation:fall linear forwards}
+  @keyframes fall{to{transform:translate3d(var(--x),110vh,0) rotate(720deg);opacity:0}}
+  .music{position:fixed;right:16px;top:16px;z-index:20;width:45px;height:45px;padding:0;margin:0;background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px)}
+  .tiny{font-size:12px;opacity:.55;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+<button class="music" id="musicBtn" aria-label="Play Lady Killers by G-Eazy">♫</button>
+<div id="confetti"></div>
+
+<section class="screen" id="opening">
+  <div class="card">
+    <div class="eyebrow">a little something for you</div>
+    <div class="photo-wrap">
+      <img class="photo" src="nidhii.jpg" alt="Nidhii">
+      <span class="float f1">🤍</span><span class="float f2">✨</span><span class="float f3">🎀</span><span class="float f4">🫶</span>
+    </div>
+    <h1>Hey, <span class="name">Mottachiii</span> 👀</h1>
+    <p>Today is officially your day.</p>
+    <p class="tiny">So obviously… I had to make this dramatic.</p><p class="tiny">🎵 Lady Killers — G-Eazy</p>
+    <button id="openBtn">Open your surprise 🎁</button>
+  </div>
+</section>
+
+<section class="screen hidden" id="birthday">
+  <div class="card reveal">
+    <div class="eyebrow">04 • 09 • your day ✨</div>
+    <h1>HAPPY BIRTHDAY<br><span class="name">NIDHIIIII</span> 🎂</h1>
+    <p>To my favourite <b>Mottachiii</b> 😋🤍</p>
+
+    <div class="letter">
+      <div class="big">A small message from me 🫶</div>
+      <p>Happy birthday mottachiii 🤍</p>
+      <p>Ith polee epplum happy aayitt irikk😋🤍</p>
+      <p><b>Motta scn thaneee 😭😂</b></p>
+      <p>Keep smiling, keep being you, and keep making life a little more fun just by being around. Hope this year gives you loads of reasons to be happy, laugh until your stomach hurts, and make some unforgettable memories. ✨</p>
+      <p>Enjoy your day, birthday girl. You deserve itttt! 🎀</p>
+    </div>
+
+    <div class="chips">
+      <span class="chip">🎂 Birthday girl</span>
+      <span class="chip">😋 Mottachiii</span>
+      <span class="chip">💋 mwuah</span>
+      <span class="chip">✨ Main character</span>
+    </div>
+
+    <button id="moreBtn">One more thing… 👀</button>
+    <div id="more" class="hidden">
+      <div class="letter">
+        <div class="big">Promise me one thing 🤝</div>
+        <p>Whatever happens this year, don't forget to stay that happy version of you. And yes, I fully expect more motta scn. 😭</p>
+        <p style="text-align:center;font-size:24px">🎉 🥳 🎂 🤍 ✨ 🫶</p>
+      </div>
+    </div>
+    <div class="footer">Made with questionable amounts of love &amp; zero professionalism 😭</div>
+  </div>
+</section>
+
+<script>
+const openBtn=document.getElementById('openBtn');
+const opening=document.getElementById('opening');
+const birthday=document.getElementById('birthday');
+const moreBtn=document.getElementById('moreBtn');
+const more=document.getElementById('more');
+const musicBtn=document.getElementById('musicBtn');
+
+function confetti(){
+  const box=document.getElementById('confetti');
+  for(let i=0;i<95;i++){
+    const s=document.createElement('span'); s.className='conf';
+    s.style.left=Math.random()*100+'vw';
+    s.style.animationDuration=(2.3+Math.random()*2.8)+'s';
+    s.style.animationDelay=(Math.random()*.45)+'s';
+    s.style.setProperty('--x',(Math.random()*220-110)+'px');
+    s.style.transform='rotate('+Math.random()*360+'deg)';
+    s.style.opacity=.7+Math.random()*.3;
+    s.style.background=['#fff','#ff9fbd','#ffd166','#b8b3ff'][Math.floor(Math.random()*4)];
+    box.appendChild(s);
+    setTimeout(()=>s.remove(),5500);
+  }
+}
+openBtn.onclick=()=>{
+  opening.classList.add('hidden');
+  birthday.classList.remove('hidden');
+  confetti();
+  startMusic();
+};
+
+moreBtn.onclick=()=>{
+  more.classList.remove('hidden'); more.classList.add('reveal');
+  moreBtn.style.display='none'; confetti();
+};
+
+// Lady Killers by G-Eazy — opens the official YouTube upload.
+const songUrl = "https://www.youtube.com/watch?v=P2rT2vw9i_k";
+let playing = false;
+function startMusic(){
+  window.open(songUrl, "_blank", "noopener,noreferrer");
+  musicBtn.textContent = "♫";
+}
+musicBtn.onclick = startMusic;
+</script>
+</body>
+</html>
